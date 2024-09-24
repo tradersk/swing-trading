@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Card Design</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .intro-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+            padding: 40px;
+            background: linear-gradient(90deg, rgba(0,123,255,1) 0%, rgba(0,51,102,1) 100%);
+            border-radius: 10px;
+        }
+
+        .intro-section .text-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .intro-section .text-content h1 {
+            font-size: 2.5em;
+            color: white;
+        }
+
+        .intro-section .text-content p {
+            font-size: 1.2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .intro-section .text-content .see-works-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .intro-section .text-content .see-works-btn:hover {
+            background-color: #ff4f4f;
+        }
+
+        .intro-section img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 20px;
+            background-color: #e0e0e0;
+            border: 4px solid white;
+        }
+
+        .background-section {
+            padding: 50px 0;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        h2.section-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p.description {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Card Container */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Individual Card Styling */
+        .card {
+         background: darkblue;
+;
+
+
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 48%; /* Show side by side on desktop */
+            margin-bottom: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center; /* Centering content inside */
+        }
+
+        /* Card Image Styling */
+        .card img {
+            width: 500px;
+            height: 250px;
+            margin-bottom: 15px;
+            border-radius: 0%; /* Makes the image circular */
+            object-fit: cover;
+            background-color: #e0e0e0;
+            border: 1px solid white;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            color:white;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: white;
+        }
+
+        .card .fee {
+            font-size: 1.2em;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .card .join-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff9a00; /* Matches the gradient style */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .card .join-btn:hover {
+            background-color: #ff4f4f; /* Button hover effect */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .intro-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .intro-section img {
+                order: -1;
+                margin: 0 auto 20px auto;
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        footer img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        footer .social-links a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        footer .social-links a:hover {
+            color: #ff7f7f;
+        }
+
+        footer .disclaimer {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 20px;
+        }
+		
+		.strategy-points {
+    text-align: left; /* Align text to the left */
+    list-style: none; /* Remove default list style */
+    padding-left: 0; /* Remove left padding */
+	color: white; /* Set text color to white */
+}
+
+.strategy-points li {
+    margin-bottom: 10px; /* Add spacing between each point */
+    padding-left: 25px; /* Add some left padding for custom bullet points */
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Eo_circle_green_checkmark.svg/1024px-Eo_circle_green_checkmark.svg.png') no-repeat left center; /* Custom bullet icon */
+    background-size: 15px; /* Resize icon */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header section -->
+    <header>
+        <h1>Trader SK</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <div class="container">
+        <div class="intro-section">
+            <div class="text-content">
+                <h1>Welcome, My Friends<span>👋</span><br>I'm Sreekrishnan SK (B.com CA, MCA)</h1>
+                <p>I'm a simple guy with an interest in Finance and Technology. <br>I Trade in Stock Market, I do Digital Marketing & SEO and Web Development <br> I like to learn from others and sharing knowledge with others.</p>
+             
+            </div>
+            <img src="sk.jpeg" alt="Placeholder Image">
+        </div>
+    </div>
+<hr>
+    <!-- Background section to visually separate Master Your Financial Strategies -->
+    <div class="background-section">
+        <div class="container">
+            <!-- Master Financial Strategies Section -->
+            <h2 class="section-title">I Teach What I Trade, and Trade What I Teach</h2>
+            <p class="description">Join now and Learn my personal Swing Trading Strategies!</p>
+
+            <div class="card-container">
+                <!-- Card 1: Stock Swing Trading -->
+                <div class="card">
+                   
+                    <h2>Stocks Swing Trading</h2>
+                    <p>My Primary Trading System.</p><br>
+					 <ul class="strategy-points">
+        <li>✅ Learn my Simple Price Action Patterns!</li>
+		<li>✅ Only 5 members per Live Session for concentrated learning </li>
+        <li>✅ Access to my personal inhouse Stock selection Scanner</li>
+        <li>✅ No complex Technical knowledge needed.</li>
+        <li>✅ Min 1:2 Risk Reward Ratio.</li>
+		<li>✅Community support</li>
+		<li>✅1-1 DM Support</li>
+		<li>✅Learn from community only learning videos</li>
+		<li>✅I'll share my personal trade entries with you</li><br>
+    </ul>
+                  <p class="fee">Fees: ₹12,000</p>
+                    <a href="#" class="join-btn">Join Now</a>
+                </div>
+
+                <!-- Card 2: One Script One Strategy -->
+                <div class="card">
+    <h2>GOLD Swing Trading Strategy</h2>
+    <p>Only trade in one Script with one simple strategy</p><br>
+    <ul class="strategy-points">
+        <li>✅ Simplest, High Probable & Stress-free Swing Trading Method!</li>
+        <li>✅ No chart analysis, screeners or stock selection</li>
+        <li>✅ No complex Technical knowledge needed.</li>
+        <li>✅ Simple Swing Trading Method which requires minimal screen time.</li>
+        <li>✅ Suitable for students, homemakers, and night shift employees.</li>
+        <li>✅ Simple setup requires only a few minutes daily.</li>
+        <li>✅ 1-3 High Probable Trades Per Month.</li>
+        <li>✅ Min 1:2 Risk Reward Ratio.</li>
+		<li>✅Community Channel Support</li><br>
+    </ul>
+    <p class="fee">Fees: ₹6000</p>
+    <a href="#" class="join-btn">Join Now</a>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <img src="/mnt/data/logo.png" alt="Logo">
+        <div class="social-links">
+            <a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/yourchannel" target="_blank">YouTube</a>
+        </div>
+        <p class="disclaimer">Disclaimer: I am not registered with SEBI (Securities and Exchange Board of India) and the information provided on this website, Instagram, Telegram Community, Telegram Public Channel and in webinars is for educational purposes only. Trading in the stock market carries inherent risks and it is important to understand that "I am not providing any recommendations or offering a stock tips service". The content should be treated as educational in nature and any trading decisions made are done at your own risk. Seek independent advice before making financial decisions.</p>
+    </footer>
+
+</body>
+</html>
