@@ -160,73 +160,6 @@
             background-color: #ff4f4f; /* Button hover effect */
         }
 
-
-/* Specific styling for the Gold Swing Trading card */
-.gold-card {
-    background: black; /* New background color specific for Gold card */
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 48%; /* Show side by side on desktop */
-    margin-bottom: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center; /* Centering content inside */
-}
-
-/* Gold card image styling */
-.gold-card img {
-    width: 500px;
-    height: 250px;
-    margin-bottom: 15px;
-    border-radius: 8px; /* Rounded corners for gold image */
-    object-fit: cover;
-    background-color: #fff; /* Background color for image */
-    border: 1px solid white;
-}
-
-.gold-card h2 {
-    font-size: 1.5em;
-    color: white; /* Make the text color suitable for the background */
-    margin-bottom: 10px;
-}
-
-.gold-card p {
-    font-size: 1em;
-    color: white; /* White text for the golden background */
-}
-
-.gold-card .fee {
-    font-size: 1.2em;
-    color: white;
-    margin-top: 10px;
-}
-
-.gold-card .join-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff9a00; /* Matches the gradient style */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.gold-card .join-btn:hover {
-    background-color: #ff4f4f; /* Button hover effect */
-}
-
-
-
-
-
-
-
-
-
-
         /* Popup styles */
         .popup {
             display: none; /* Hidden by default */
@@ -404,7 +337,7 @@
 				
 
                 <!-- Card 2: Gold Swing Trading -->
-                <div class="gold-card">
+                <div class="card">
                     <h2>Gold Swing Trading</h2>
                     <p>My Secondary Trading System!</p><br>
                     <ul class="strategy-points">
@@ -458,7 +391,7 @@
     <div class="popup" id="stocksPopup">
         <div class="popup-content">
 			<h2> Stocks Swing Trading Session</h2>
-            <p>Please make the payment of ₹12,000 to my UPI ID and share the screenshot in Instagram/Telegram DM</p>
+            <p>Please select the course type and make the payment to my UPI ID and share the screenshot in Instagram/Telegram DM</p>
             <img src="qr.jpg" alt="QR Code">
             <p>My UPI ID: <b>sreekrishnansk@upi</b></p>
             <button class="close-btn" onclick="closePopup('stocksPopup')">Close</button>
